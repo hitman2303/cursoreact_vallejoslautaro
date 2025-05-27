@@ -1,16 +1,12 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { HashRouter } from 'react-router-dom';  // 👈 CAMBIA ESTO
-import { CartProvider } from './context/CartContext.jsx';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { HashRouter } from 'react-router-dom';
+import App from './App';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <HashRouter>  {/* 👈 CAMBIE ESTO A VER SI LO AGARRA GITHUB */}
-      <CartProvider>
-        <App />
-      </CartProvider>
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <HashRouter>
+      <App />
     </HashRouter>
-  </StrictMode>,
-)
+  </React.StrictMode>
+);

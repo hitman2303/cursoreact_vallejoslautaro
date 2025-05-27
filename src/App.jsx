@@ -9,6 +9,7 @@ import Footer from './componentes/footer';
 import Header from './componentes/header';
 import Cart from './pages/cart';
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
   <div>

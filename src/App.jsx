@@ -7,7 +7,7 @@ import ProductList from './componentes/cards';
 import { Route,Routes } from 'react-router-dom';
 import Footer from './componentes/footer';
 import Header from './componentes/header';
-import Cart from './pages/Cart';
+import Cart from './componentes/cart';
 import './App.css';
 function App() {
   return (

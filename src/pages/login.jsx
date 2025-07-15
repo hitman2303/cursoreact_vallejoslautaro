@@ -1,4 +1,5 @@
-
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import React, { useState } from "react";
 import { Container, Form, Button, Alert } from "react-bootstrap";
 
@@ -6,14 +7,15 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [contraseña, setContraseña] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Aca va la validación real
-    if (email === "ejemplo@gmail.com" && contraseña === "123456789") {
-      alert("Inicio de sesión exitoso");
-      setError("");
+    if (login(email,contraseña)) {
+        navigate("/dashboard");
     } else {
       setError("Usuario/Contraseña incorrectas");
     }

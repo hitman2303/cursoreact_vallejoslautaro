@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { useCart } from '../context/CartContext';
+import Swal from 'sweetalert2';
+
 function ProductList({ cantidad = 9}) {
   const [productos, setProductos] = useState([]);
   const [Cargando, setCargando] = useState(true);
@@ -36,9 +38,35 @@ const { añadir } = useCart();
                   <strong>Categoría:</strong> {producto.category}<br />
                   <strong>Precio:</strong> ${producto.price}
                 </Card.Text>
-<Button variant="success" onClick={() => añadir(producto)}>
+                <Button
+  variant="success"
+  onClick={() => {
+    Swal.fire({
+      title: '¿Agregar al carrito?',
+      text: `¿Querés agregar "${producto.title}" al carrito?`,
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#28a745', // verde
+      cancelButtonColor: '#d33', // rojo
+      confirmButtonText: 'Sí, agregar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        añadir(producto);
+        Swal.fire({
+          title: 'Agregado',
+          text: `"${producto.title}" fue agregado al carrito`,
+          icon: 'success',
+          timer: 1500,
+          showConfirmButton: false
+        });
+      }
+    });
+  }}
+>
   Agregar al carrito
 </Button>
+
 
               </Card.Body>
             </Card>

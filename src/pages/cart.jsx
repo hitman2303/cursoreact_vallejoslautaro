@@ -1,5 +1,6 @@
 import { useCart } from '../context/CartContext';
 import { Container, Button, Row, Col } from 'react-bootstrap';
+import Swal from 'sweetalert2';
 
 function Cart() {
   const { cart, remover, actualizar } = useCart();
@@ -26,7 +27,35 @@ function Cart() {
             />
           </Col>
           <Col md={2}>
-            <Button variant="danger" onClick={() => remover(item.id)}>Eliminar</Button>
+            <Button
+  variant="danger"
+  onClick={() => {
+    Swal.fire({
+      title: '¿Eliminar producto?',
+      text: `¿Estás seguro que querés eliminar "${item.title}" del carrito?`,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#d33',
+      cancelButtonColor: '#6c757d',
+      confirmButtonText: 'Sí, eliminar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        remover(item.id);
+        Swal.fire({
+          title: 'Eliminado',
+          text: `"${item.title}" fue eliminado del carrito.`,
+          icon: 'success',
+          timer: 1500,
+          showConfirmButton: false
+        });
+      }
+    });
+  }}
+>
+  Eliminar
+</Button>
+
           </Col>
         </Row>
       ))}

@@ -5,7 +5,7 @@ const Catalogo=()=>
     {
         return(
 <Container className="mt-4">
-    <ProductList cantidad={9} />
+    <ProductList cantidad={20} />
 </Container>
         );
     };

@@ -13,7 +13,7 @@ Este proyecto es una aplicación de comercio electrónico desarrollada con **Rea
 
 ## 🚀 Demo en producción
 
-📍 [Ver sitio en Netlify](https://cursoreact_vallejoslautaro.netlify.app/) *(link ficticio, actualizar si tenés uno real)*
+📍 [Ver sitio en Netlify](https://exquisite-malasada-15e910.netlify.app/)
 
 ---
 
@@ -22,7 +22,7 @@ Este proyecto es una aplicación de comercio electrónico desarrollada con **Rea
 Asegurate de tener instalado:
 
 - **Node.js** (versión 16 o superior recomendada)
-- **npm** o **yarn**
+- **npm** 
 
 ---
 

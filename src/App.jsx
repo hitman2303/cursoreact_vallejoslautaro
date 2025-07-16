@@ -17,6 +17,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
   <div>
+    <h1>Prueba de que anda el app.jsx</h1>
       <div>   
       <AuthProvider>
       {/* 

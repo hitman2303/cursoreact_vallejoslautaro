@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import ProductList from "../componentes/cards";
+import ProductList from "../components/cards";
 const Catalogo=()=>
     {
         return(

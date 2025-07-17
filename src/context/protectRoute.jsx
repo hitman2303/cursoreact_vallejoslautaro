@@ -1,5 +1,5 @@
 import {Navigate} from "react-router-dom";
-import { useAuth } from "../context/Authcontext"; // Importa el hook useAuth para acceder al contexto de autenticación
+import { useAuth } from "./Authcontext"; // Importa el hook useAuth para acceder al contexto de autenticación
 // Componente de ruta protegida
 function ProtectedRoute({ children }) {
 const {token} = useAuth(); // Obtiene el token de autenticación del contexto

@@ -13,7 +13,7 @@ Este proyecto es una aplicación de comercio electrónico desarrollada con **Rea
 
 ## 🚀 Demo en producción
 
-📍 [Ver sitio en Netlify](https://exquisite-malasada-15e910.netlify.app/)
+📍 [Ver sitio en Netlify](https://timely-choux-926c0f.netlify.app/)
 
 ---
 

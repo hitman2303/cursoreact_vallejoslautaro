@@ -1,16 +1,16 @@
 import Navegacion from './components/navbar';
-import Home from './Pages/home';
-import Descuentos from './Pages/Descuentos';
-import Catalogo from './Pages/catalogo';
-import Login from './Pages/login';
+import Home from './pages/home';
+import Descuentos from './pages/Descuentos';
+import Catalogo from './pages/catalogo';
+import Login from './pages/login';
 import ProductList from './components/cards';
 import { Route,Routes } from 'react-router-dom';
 import Footer from './components/footer';
 import Header from './components/header';
-import Cart from './Pages/cart';
+import Cart from './pages/cart';
 import { AuthProvider } from './context/AuthContext';
 import CrudProductos from './components/Crud';
-import Dashboard from './Pages/dashboard';
+import Dashboard from './pages/dashboard';
 // Importa los estilos de Bootstrap y tu archivo CSS personalizado
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
